@@ -1,2 +1,2 @@
 import Deck from './components/Deck';
-export default Deck;
+export { Deck };
