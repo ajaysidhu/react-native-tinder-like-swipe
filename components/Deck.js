@@ -26,7 +26,8 @@ export default class Deck extends React.PureComponent {
         onSwipeLeft: PropTypes.func,
         onSwipeRight: PropTypes.func,
         noMoreCards: PropTypes.func,
-        renderItem: PropTypes.elementType
+        renderItem: PropTypes.elementType,
+        containerStyle: PropTypes.object
     }
     // static propTypes = {
     //     data: PropTypes.array.isRequired
@@ -164,8 +165,10 @@ export default class Deck extends React.PureComponent {
     }
     render() {
         return (
-            <View>
-                {/* {this.renderCards()} */}
+            <View
+                style={this.props.containerStyle}
+            >
+                {this.renderCards()}
             </View>
         );
     }
